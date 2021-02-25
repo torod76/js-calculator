@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Source+Sans+Pro&display=swap');
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+}
+
+body {
+    background-color: lightgrey;
+}
+
+.wrapper {
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container {
+    width: 280px;
+    height: 420px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 1em;
+    margin-right: 1em;
+    background-color: white;
+    border-radius: 7px;
+    -webkit-box-shadow: 3px 3px 5px 6px rgb(182, 182, 182);
+    -moz-box-shadow:    3px 3px 5px 6px rgb(182, 182, 182);
+    box-shadow:         3px 3px 5px 6px rgb(182, 182, 182);
+}
+
+.button {
+    border: none;
+    border-radius: 7px;
+    width: 62px;
+    height: 62px;
+    margin-right: 8px;
+    font-size: 1em;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0) !important; 
+    -webkit-focus-ring-color: rgba(255, 255, 255, 0) !important; 
+    outline: none !important;
+    transition: background-color 0.3s;
+}
+
+.button:active {
+	background: #bfbfbf;
+}
+
+
+#first-row,
+#second-row,
+#third-row,
+#fourth-row,
+#fifth-row,
+#sixth-row {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 100%;
+    flex:1;
+    padding-left: 8px;
+    padding-bottom: 8px;
+}
+
+#small-result, #result {
+    display: flex;
+    justify-content: start;
+    flex-direction: row-reverse;
+    width: 100%;
+}
+
+#result {
+    font-size: 1em;
+    margin-right: 16px;
+}
+
+#small-result {
+    font-size:0.4em;
+    margin-right: 16px;
+}
+
+
+#first-row {
+
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 2em;
+    flex-direction: column;
+}
+
+#second-row {
+    justify-content: start;
+    flex-direction: row-reverse;
+}
+
+#second-row > .button:nth-of-type(1){
+    background-color: red;
+    color: white;
+}
+
+#second-row > .button:nth-of-type(1):active{
+    background-color: rgb(182, 8, 8);
+    color: white;
+}
+
+.button:nth-of-type(4),
+.button:nth-of-type(8),
+.button:nth-of-type(12),
+.button:nth-of-type(16){
+    background-color: #eb9109;
+    color: white;
+}
+
+.button:nth-of-type(4):active,
+.button:nth-of-type(8):active,
+.button:nth-of-type(12):active,
+.button:nth-of-type(16){
+    background-color: #c77b0a;
+}
+
+#sixth-row > .button:nth-of-type(3){
+    background-color: #eb9109;
+    color: white;
+}
+
+@media screen and (min-width: 375px) {
+    .container {
+        width: 280px;
+    }
+}
