@@ -66,9 +66,8 @@ function calcTotal(currentOperator){
     }
 
     if (leftSide && !rightSide) {
-        result.innerHTML = currentOperator;
         let temp = smallResult.innerHTML.toString();
-        smallResult.innerHTML = temp + operator;
+        smallResult.innerHTML = temp + currentOperator;
         operator = currentOperator;
         operatorPressed = true;
     }
