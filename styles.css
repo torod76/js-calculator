@@ -193,11 +193,15 @@ body {
     flex-direction: row-reverse;
     width: 100%;
     color: var(--clr-text);
+    -webkit-transition: color 0.5s;
+    -o-transition: color 0.5s;
+    transition: color 0.5s;
 }
 
 #result {
     font-size: 1em;
     margin-right: 16px;
+    
 }
 
 #small-result {
@@ -214,6 +218,7 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+
 }
 
 #second-row {
