@@ -1,11 +1,15 @@
 # JavaScript Calculator
-A Calculator Application built with JavaScript, HTML, CSS. Check out if you like it.
 
-[![calc.png](https://i.postimg.cc/5Ny3TKZw/calc.png)](https://postimg.cc/Vdynbgs6)
+Simple calculator web application built using JavaScript, HTML and CSS. It supports dark mode and mobile view. Feel free to browse the code or use it if you want to.
 
-## DEMO: 
+[![color-modes.png](https://i.postimg.cc/t4FyMvX2/color-modes.png)](https://postimg.cc/hX4HJrQd)
+
+## DEMO:
+
 You can try it out:
-[Link](https://torod76.github.io/js-calculator/) 
+
+[Link](https://torod76.github.io/js-calculator/)
 
 ## TODO:
- - Implement darkmode
+
+~~- Implement darkmode~~ - done
