@@ -7,8 +7,47 @@
     font-family: "Roboto", sans-serif;
 }
 
+:root {
+    --clr-light: #f7f7f7;
+    --clr-dark: #b4b4b4;
+    --clr-shadow: rgb(180, 180, 180);
+    --clr-primary: white;
+    --clr-button: #dadada;
+    --clr-text: black;
+    --clr-buttonshadow: #bfbfbf;
+
+    --background: var(--clr-light);
+}
+
+.dark {
+    --clr-light: #f7f7f7;
+    --clr-dark: black;
+    --clr-shadow: rgb(0, 0, 0);
+    --clr-primary: rgb(56, 56, 56);
+    --clr-button: rgb(31, 31, 31);
+    --clr-text: white;
+    --clr-buttonshadow: #707070;
+
+    --background: var(--clr-dark);
+}
+
+.light {
+    --clr-light: #f7f7f7;
+    --clr-dark: #292929;
+    --clr-shadow: rgb(180, 180, 180);
+    --clr-primary: white;
+    --clr-button: #dadada;
+    --clr-text: black;
+    --clr-buttonshadow: #bfbfbf;
+
+    --background: var(--clr-light);
+}
+
 body {
-    background-color: lightgrey;
+    background: var(--background);
+    -webkit-transition: background-color 0.5s;
+    -o-transition: background-color 0.5s;
+    transition: background-color 0.5s;
 }
 
 .wrapper {
@@ -22,6 +61,7 @@ body {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    flex-direction: column;
 }
 .container {
     width: 280px;
@@ -41,10 +81,13 @@ body {
             align-items: center;
     margin-left: 1em;
     margin-right: 1em;
-    background-color: white;
+    background-color:  var(--clr-primary);
     border-radius: 7px;
-    -webkit-box-shadow: 3px 3px 5px 6px rgb(182, 182, 182);
-    box-shadow:         3px 3px 5px 6px rgb(182, 182, 182);
+    -webkit-box-shadow: 3px 3px 5px 6px var(--clr-shadow);
+    box-shadow:         3px 3px 5px 6px var(--clr-shadow);
+    -webkit-transition: background-color 0.5s, webkit-box-shadow 0.5s;
+    -o-transition: background-color 0.5s, box-shadow 0.5s;
+    transition: background-color 0.5s, box-shadow 0.5s;
 }
 
 .button {
@@ -57,14 +100,56 @@ body {
     height: 62px;
     margin-right: 8px;
     font-size: 1em;
+    color: var(--clr-text);
     -webkit-tap-highlight-color: rgba(255, 255, 255, 0) !important; 
     -webkit-focus-ring-color: rgba(255, 255, 255, 0) !important; 
     outline: none !important;
-    -webkit-transition: background-color 0.3s;
-    -o-transition: background-color 0.3s;
-    transition: background-color 0.3s;
-    background-color: #efefef;
+    -webkit-transition: background-color 0.5s, color 0.5s;
+    -o-transition: background-color 0.5s, color 0.5s;
+    transition: background-color 0.5s, color 0.5s;
+    background-color: var(--clr-button);
     opacity: 1;
+}
+
+.darkmode-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+    border-radius: 7px;
+    width: 124px;
+    height: 31px;
+    position: relative;
+    margin-left: -158px;
+    margin-top: 8px;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0) !important; 
+    -webkit-focus-ring-color: rgba(255, 255, 255, 0) !important;
+    -webkit-box-shadow: 3px 3px 5px 6px var(--clr-shadow);
+    box-shadow:         3px 3px 5px 6px var(--clr-shadow);
+    outline: none !important;
+    -webkit-transition: background-color 0.5s, webkit-box-shadow 0.5s;
+    -o-transition: background-color 0.5s, box-shadow 0.5s;
+    transition: background-color 0.5s, box-shadow 0.5s;
+    background-color: #272424;
+    color: white;
+    opacity: 1;
+    font-size: 0.8em;
+    cursor:pointer;
+}
+
+.darkmode-button > p {
+    margin-right: 10px;
+}
+.darkmode-button:active {
+    background: #4b4848;
+}
+
+.darkmode-ico {
+    width: 15px;
+    height: 15px;
 }
 
 .button:active {
@@ -107,6 +192,7 @@ body {
     -ms-flex-direction: row-reverse;
     flex-direction: row-reverse;
     width: 100%;
+    color: var(--clr-text);
 }
 
 #result {
